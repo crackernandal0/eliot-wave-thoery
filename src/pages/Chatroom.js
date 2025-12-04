@@ -223,18 +223,18 @@ const Chatroom = () => {
         }
       `}</style>
       
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen bg-transparent flex flex-col">
         <Header />
         
         {/* Chat Header */}
-        <div className="premium-card bg-white border-b border-gray-200 px-6 py-4">
+        <div className="premium-card bg-white/5 border-b border-white/10 px-6 py-4 text-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full online-indicator"></div>
-                <h1 className="text-2xl font-bold text-gray-900">Elliott Wave Trading Room</h1>
+                <h1 className="text-2xl font-bold text-white">Elliott Wave Trading Room</h1>
               </div>
-              <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm font-medium">
                 {onlineUsers.filter(u => u.status === 'online').length} online
               </span>
             </div>
@@ -242,11 +242,11 @@ const Chatroom = () => {
             <div className="flex items-center space-x-4">
               <button 
                 onClick={() => setIsUserListOpen(!isUserListOpen)}
-                className="lg:hidden luxury-button text-white px-4 py-2 rounded-lg font-medium"
+                className="lg:hidden btn-primary px-4 py-2 rounded-lg font-medium"
               >
                 Users
               </button>
-              <button className="premium-card bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors">
+              <button className="btn-primary px-4 py-2 rounded-lg font-medium">
                 Settings
               </button>
             </div>
@@ -337,7 +337,7 @@ const Chatroom = () => {
                 </div>
                 <button
                   onClick={handleSendMessage}
-                  className="luxury-button text-white px-6 py-3 rounded-lg font-medium flex items-center space-x-2"
+                  className="btn-primary px-6 py-3 rounded-lg font-medium flex items-center space-x-2"
                 >
                   <span>Send</span>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -348,13 +348,13 @@ const Chatroom = () => {
               
               <div className="flex items-center justify-between mt-3 text-sm text-gray-500">
                 <div className="flex items-center space-x-4">
-                  <button className="hover:text-teal-600 transition-colors">
+                  <button className="hover:text-fuchsia-400 transition-colors">
                     📎 Attach Chart
                   </button>
-                  <button className="hover:text-teal-600 transition-colors">
+                  <button className="hover:text-fuchsia-400 transition-colors">
                     😊 Emoji
                   </button>
-                  <button className="hover:text-teal-600 transition-colors">
+                  <button className="hover:text-fuchsia-400 transition-colors">
                     📊 Share Analysis
                   </button>
                 </div>

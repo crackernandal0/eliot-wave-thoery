@@ -567,7 +567,7 @@ const LandingPage = () => {
         }
       `}</style>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-transparent">
         <Header />
         
         {/* Custom Cursor */}
@@ -603,7 +603,7 @@ const LandingPage = () => {
                 </svg>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gray-100">
                 Master <span className="text-yellow-400 floating-element">Elliott Waves</span>
                 <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
@@ -611,7 +611,7 @@ const LandingPage = () => {
                 </span>
               </h1>
               
-              <p className="text-2xl md:text-3xl mb-8 text-gray-200 max-w-4xl mx-auto">
+              <p className="text-2xl md:text-3xl mb-8 text-gray-300 max-w-4xl mx-auto">
                 🚀 AI-Powered Trading • 📊 Real-Time Charts • 🏆 Community Competitions
               </p>
               
@@ -634,13 +634,13 @@ const LandingPage = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                 <Link 
                   to="/courses" 
-                  className="luxury-button text-white px-12 py-5 rounded-2xl font-bold text-xl transform hover:scale-110 transition-all duration-300 shadow-2xl"
+                  className="btn-primary rounded-2xl"
                 >
                   🎓 Start Trading Journey
                 </Link>
                 <Link 
                   to="/charts" 
-                  className="luxury-button text-white px-12 py-5 rounded-2xl font-bold text-xl transform hover:scale-110 transition-all duration-300 shadow-2xl"
+                  className="btn-primary rounded-2xl"
                 >
                   📈 Live Trading Charts
                 </Link>
@@ -675,13 +675,13 @@ const LandingPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Everything You Need to Master Elliott Waves
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive tools and community support for wave-based trading success
               </p>
             </div>
@@ -697,8 +697,8 @@ const LandingPage = () => {
                     <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center text-2xl mx-auto mb-4 floating-element`}>
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -707,19 +707,19 @@ const LandingPage = () => {
         </section>
         
         {/* Course Spotlight */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <section className="py-20 bg-gradient-to-br from-slate-950 via-gray-900 to-black">
           <div className="container mx-auto px-6">
-            <div className="course-spotlight max-w-4xl mx-auto text-center">
+                <div className="course-spotlight max-w-4xl mx-auto text-center text-white">
               <div className="premium-card bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-2xl p-8 md:p-12">
                 <div className="course-image w-24 h-24 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 rounded-full mx-auto mb-6 flex items-center justify-center floating-element">
                   <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Master Elliott Wave Trading
                 </h2>
-                <p className="text-xl text-gray-600 mb-6">
+                <p className="text-xl text-gray-300 mb-6">
                   Our flagship course covering all 5 waves, corrections, and advanced patterns
                 </p>
                 <div className="flex items-center justify-center space-x-4 mb-8">
@@ -729,7 +729,7 @@ const LandingPage = () => {
                 </div>
                 <Link 
                   to="/courses" 
-                  className="luxury-button inline-block text-white px-8 py-4 rounded-lg font-bold text-lg"
+                  className="btn-primary"
                 >
                   Start Learning Now
                 </Link>
@@ -739,7 +739,7 @@ const LandingPage = () => {
         </section>
         
         {/* Community Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <section className="py-20 bg-gradient-to-br from-slate-950 via-gray-900 to-black">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -755,21 +755,21 @@ const LandingPage = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="premium-card bg-gradient-to-br from-white to-gray-100 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Live Chatroom</h3>
-                  <p className="text-gray-600 mb-4">Connect with traders worldwide and share real-time market insights</p>
-                  <div className="text-sm text-gray-500">🟢 1,247 traders online</div>
+                <div className="premium-card bg-gradient-to-br from-white/10 to-white/5 rounded-lg p-6 text-white">
+                  <h3 className="text-xl font-bold mb-3">Live Chatroom</h3>
+                  <p className="text-gray-300 mb-4">Connect with traders worldwide and share real-time market insights</p>
+                  <div className="text-sm text-gray-400">🟢 1,247 traders online</div>
                 </div>
-                <div className="premium-card bg-gradient-to-br from-white to-gray-100 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Chart Competition</h3>
-                  <p className="text-gray-600 mb-4">Compete in weekly prediction contests and win prizes</p>
-                  <div className="text-sm text-gray-500">🏆 $5,000 monthly prizes</div>
+                <div className="premium-card bg-gradient-to-br from-white/10 to-white/5 rounded-lg p-6 text-white">
+                  <h3 className="text-xl font-bold mb-3">Chart Competition</h3>
+                  <p className="text-gray-300 mb-4">Compete in weekly prediction contests and win prizes</p>
+                  <div className="text-sm text-gray-400">🏆 $5,000 monthly prizes</div>
                 </div>
               </div>
               
               <Link 
                 to="/chatroom" 
-                className="luxury-button inline-block text-white px-8 py-4 rounded-lg font-bold text-lg"
+                className="btn-primary"
               >
                 Join the Community
               </Link>
@@ -778,14 +778,14 @@ const LandingPage = () => {
         </section>
         
         {/* TradingView Demo */}
-        <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+        <section className="py-20 bg-gradient-to-br from-slate-950 via-gray-900 to-black">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
                 Professional Trading Tools
               </h2>
               
-              <div className="chart-demo bg-white rounded-2xl shadow-xl p-8">
+              <div className="chart-demo bg-white/5 rounded-2xl shadow-xl p-8 text-white border border-white/10">
                 <div className="bg-gray-900 rounded-lg h-96 flex items-center justify-center mb-6">
                   <div className="text-center text-white">
                     <svg className="w-20 h-20 mx-auto mb-4 text-teal-400" fill="currentColor" viewBox="0 0 24 24">
@@ -798,7 +798,7 @@ const LandingPage = () => {
                 
                 <Link 
                   to="/charts" 
-                  className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-xl"
+                  className="btn-primary"
                 >
                   Try Live Charts
                 </Link>
@@ -811,7 +811,7 @@ const LandingPage = () => {
         <div className="fixed bottom-4 right-4 z-50">
           <button 
             onClick={() => setChatbotOpen(!chatbotOpen)}
-            className="chatbot-button bg-teal-500 hover:bg-teal-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:shadow-xl"
+            className="btn-primary w-16 h-16 rounded-full flex items-center justify-center"
             aria-label="Open chatbot"
           >
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -839,7 +839,7 @@ const LandingPage = () => {
                   placeholder="Ask about wave trading..."
                   className="flex-1 border rounded-l px-3 py-2 text-sm focus:outline-none focus:border-teal-500"
                 />
-                <button className="bg-teal-500 text-white px-4 py-2 rounded-r hover:bg-teal-600 transition-colors">
+                <button className="btn-primary px-4 py-2 rounded-r">
                   Send
                 </button>
               </div>

@@ -40,7 +40,7 @@ const Header = () => {
         
         .wave-nav {
           position: relative;
-          background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+          background: linear-gradient(135deg, #0b1020 0%, #0a0f1a 50%, #000000 100%);
         }
         
         .wave-nav::before {
@@ -88,7 +88,7 @@ const Header = () => {
         }
       `}</style>
       
-      <header className="wave-nav shadow-lg relative z-50">
+      <header className="wave-nav sticky top-0 z-50 shadow-lg">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -98,7 +98,7 @@ const Header = () => {
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
-              <span className="logo-wave text-2xl font-bold tracking-wide">
+              <span className="logo-wave text-2xl font-bold tracking-wide text-gray-100">
                 ElliottEvery
               </span>
             </Link>
@@ -109,8 +109,8 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`nav-link text-white font-medium px-3 py-2 rounded-md transition-all duration-300 hover:bg-white hover:bg-opacity-10 ${
-                    location.pathname === link.path ? 'bg-white bg-opacity-20' : ''
+                  className={`nav-link text-gray-100 font-medium px-3 py-2 rounded-md transition-all duration-300 hover:bg-white/10 ${
+                    location.pathname === link.path ? 'bg-white/10' : ''
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -121,7 +121,7 @@ const Header = () => {
             
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button className="text-white hover:text-yellow-400 transition-colors duration-300">
+              <button className="text-gray-100 hover:text-yellow-400 transition-colors duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>

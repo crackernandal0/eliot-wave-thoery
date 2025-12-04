@@ -349,11 +349,11 @@ const ProfilePage = () => {
         }
       `}</style>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-transparent">
         <Header />
         
         {/* Profile Header */}
-        <section className="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16 profile-hero">
+        <section className="bg-gradient-to-r from-slate-950 via-gray-900 to-black text-white py-16 profile-hero">
           <div className="container mx-auto px-6">
             <div className="premium-card max-w-4xl mx-auto">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -374,7 +374,7 @@ const ProfilePage = () => {
                         {userStats.level}
                       </div>
                     </div>
-                    <button className="luxury-button mt-4 md:mt-0 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                    <button className="btn-primary mt-4 md:mt-0 px-6 py-2 rounded-lg font-medium">
                       Edit Profile
                     </button>
                   </div>
@@ -402,22 +402,22 @@ const ProfilePage = () => {
         </section>
         
         {/* Stats Section */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
-              <div className="premium-card floating-element text-center p-4 bg-gray-50 rounded-lg" style={{ animationDelay: '0s' }}>
+                <div className="card-dark floating-element text-center p-4" style={{ animationDelay: '0s' }}>
                 <div className="text-2xl font-bold text-teal-600">{userStats.totalTrades.toLocaleString()}</div>
                 <div className="text-sm text-gray-600">Total Trades</div>
               </div>
-              <div className="premium-card floating-element text-center p-4 bg-gray-50 rounded-lg" style={{ animationDelay: '0.1s' }}>
+              <div className="card-dark floating-element text-center p-4" style={{ animationDelay: '0.1s' }}>
                 <div className="text-2xl font-bold text-green-600">{userStats.winRate}%</div>
                 <div className="text-sm text-gray-600">Win Rate</div>
               </div>
-              <div className="premium-card floating-element text-center p-4 bg-gray-50 rounded-lg" style={{ animationDelay: '0.2s' }}>
+              <div className="card-dark floating-element text-center p-4" style={{ animationDelay: '0.2s' }}>
                 <div className="text-2xl font-bold text-blue-600">${userStats.totalProfit.toLocaleString()}</div>
                 <div className="text-sm text-gray-600">Total Profit</div>
               </div>
-              <div className="premium-card floating-element text-center p-4 bg-gray-50 rounded-lg" style={{ animationDelay: '0.3s' }}>
+              <div className="card-dark floating-element text-center p-4" style={{ animationDelay: '0.3s' }}>
                 <div className="text-2xl font-bold text-purple-600">{userStats.followers.toLocaleString()}</div>
                 <div className="text-sm text-gray-600">Followers</div>
               </div>
@@ -568,13 +568,13 @@ const ProfilePage = () => {
                 <div className="mt-8 bg-white rounded-lg shadow-md p-6">
                   <h3 className="font-bold text-gray-900 mb-4">Quick Actions</h3>
                   <div className="space-y-3">
-                    <Link to="/courses" className="luxury-button block w-full bg-teal-600 hover:bg-teal-700 text-white text-center py-2 rounded-lg font-medium transition-colors">
+                    <Link to="/courses" className="btn-primary block w-full text-center py-2 rounded-lg font-medium">
                       Browse Courses
                     </Link>
-                    <Link to="/chatroom" className="luxury-button block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition-colors">
+                    <Link to="/chatroom" className="btn-primary block w-full text-center py-2 rounded-lg font-medium">
                       Join Chatroom
                     </Link>
-                    <Link to="/chart-competition" className="luxury-button block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg font-medium transition-colors">
+                    <Link to="/chart-competition" className="btn-primary block w-full text-center py-2 rounded-lg font-medium">
                       Enter Competition
                     </Link>
                   </div>

@@ -29,7 +29,7 @@ const Footer = () => {
         
         .footer-wave {
           position: relative;
-          background: linear-gradient(135deg, #0f766e, #14b8a6, #0f766e);
+          background: linear-gradient(135deg, #0b1020, #0a0f1a, #000000);
           background-size: 200% 200%;
           animation: wave-bg 8s ease-in-out infinite;
         }
@@ -65,7 +65,7 @@ const Footer = () => {
         }
       `}</style>
       
-      <footer className="footer-wave text-white py-16 mt-20">
+      <footer className="footer-wave text-gray-100 py-16 mt-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
@@ -78,7 +78,7 @@ const Footer = () => {
                 </div>
                 <span className="text-2xl font-bold">ElliottEvery</span>
               </div>
-              <p className="text-gray-200 mb-4 max-w-md">
+              <p className="text-gray-300 mb-4 max-w-md">
                 Master the markets with wave-based trading education. Join thousands of traders learning Elliott Wave patterns with AI-powered tools and community support.
               </p>
               <div className="flex space-x-4">
@@ -114,7 +114,7 @@ const Footer = () => {
                 <li>support@elliottevery.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li className="pt-4">
-                  <button className="footer-link bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg">
+                  <button className="btn-primary px-4 py-2 rounded-lg font-medium">
                     Newsletter
                   </button>
                 </li>
@@ -122,7 +122,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ElliottEvery. All rights reserved. Master the waves, master the markets.</p>
           </div>
         </div>

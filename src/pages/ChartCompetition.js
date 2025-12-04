@@ -388,11 +388,11 @@ const ChartCompetition = () => {
         </div>
       </div>
       
-      <div className="min-h-screen bg-gray-50 chart-cursor">
+      <div className="min-h-screen bg-transparent chart-cursor">
         <Header />
         
         {/* Competition Header */}
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-white py-16 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-black text-white py-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-10 animate-pulse"></div>
@@ -432,7 +432,7 @@ const ChartCompetition = () => {
               
               <button 
                 onClick={handleSubmitChart}
-                className="luxury-button bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1"
+                className="btn-primary px-8 py-4 rounded-xl font-bold text-lg"
               >
                 🚀 Submit Your Analysis
               </button>
@@ -441,17 +441,17 @@ const ChartCompetition = () => {
         </section>
         
         {/* Prize Structure */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-br from-slate-950 via-gray-900 to-black relative overflow-hidden text-white">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-200 rounded-full opacity-20 animate-pulse"></div>
             <div className="absolute bottom-20 right-10 w-24 h-24 bg-purple-200 rounded-full opacity-20 animate-bounce"></div>
           </div>
           <div className="container mx-auto px-6 relative z-10">
              <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Prize Structure
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-300">
                 Compete for your share of the prize pool
               </p>
             </div>
@@ -460,14 +460,14 @@ const ChartCompetition = () => {
               {prizes.map((prize, index) => (
                 <div 
                   key={index}
-                  className="premium-card floating-element text-center p-6 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300"
+                  className="card-dark floating-element text-center p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className={`floating-element w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${prize.color} flex items-center justify-center text-2xl`}>
                     {prize.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{prize.place} Place</h3>
-                  <p className="text-2xl font-bold text-teal-600">{prize.prize}</p>
+                  <h3 className="text-xl font-bold mb-2">{prize.place} Place</h3>
+                  <p className="text-2xl font-bold text-teal-300">{prize.prize}</p>
                 </div>
               ))}
             </div>
@@ -481,43 +481,31 @@ const ChartCompetition = () => {
               {/* Leaderboard */}
               <div className="lg:col-span-2">
                 <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Leaderboard</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">Leaderboard</h2>
                   <div className="flex space-x-2">
                     <button 
                       onClick={() => setSelectedTimeframe('weekly')}
-                      className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                        selectedTimeframe === 'weekly' 
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg' 
-                          : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 hover:from-gray-200 hover:to-gray-300 hover:shadow-md'
-                      }`}
+                      className={`${selectedTimeframe === 'weekly' ? 'btn-primary' : 'btn-secondary'} px-6 py-3 rounded-xl font-medium`}
                     >
                       📅 Weekly
                     </button>
                     <button 
                       onClick={() => setSelectedTimeframe('monthly')}
-                      className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                        selectedTimeframe === 'monthly' 
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg' 
-                          : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 hover:from-gray-200 hover:to-gray-300 hover:shadow-md'
-                      }`}
+                      className={`${selectedTimeframe === 'monthly' ? 'btn-primary' : 'btn-secondary'} px-6 py-3 rounded-xl font-medium`}
                     >
                       🗓️ Monthly
                     </button>
                     <button 
                       onClick={() => setSelectedTimeframe('alltime')}
-                      className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                        selectedTimeframe === 'alltime' 
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg' 
-                          : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 hover:from-gray-200 hover:to-gray-300 hover:shadow-md'
-                      }`}
+                      className={`${selectedTimeframe === 'alltime' ? 'btn-primary' : 'btn-secondary'} px-6 py-3 rounded-xl font-medium`}
                     >
                       🏆 All Time
                     </button>
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-xl overflow-hidden border border-gray-100">
-                  <div className="bg-gradient-to-r from-indigo-50 to-purple-50 px-6 py-3 border-b border-gray-200">
+                <div className="card-dark rounded-xl shadow-xl overflow-hidden">
+                  <div className="bg-white/5 px-6 py-3 border-b border-white/10">
                     <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-600">
                       <div className="col-span-1">Rank</div>
                       <div className="col-span-4">Trader</div>

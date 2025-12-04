@@ -634,7 +634,7 @@ const CoursePage = () => {
         }
       `}</style>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 course-cursor">
+      <div className="min-h-screen bg-transparent course-cursor">
         {/* Custom Cursor */}
         <div 
           className={`custom-cursor ${
@@ -649,7 +649,7 @@ const CoursePage = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="relative min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+        <section className="relative min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-black text-white py-20 overflow-hidden">
           {/* Animated Background Particles */}
           <div className="absolute inset-0">
             <div className="hero-particle absolute top-20 left-10 opacity-70" style={{animationDelay: '0s'}}></div>
@@ -720,10 +720,10 @@ const CoursePage = () => {
               </div>
               
               <div className="hero-element flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <button className="premium-button text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl">
+                <button className="btn-primary rounded-2xl">
                   🚀 Start Your Journey
                 </button>
-                <button className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300">
+                <button className="btn-secondary rounded-2xl">
                   📺 Watch Demo
                 </button>
               </div>
@@ -732,7 +732,7 @@ const CoursePage = () => {
         </section>
         
         {/* Course List */}
-        <section className="py-32 bg-gradient-to-b from-slate-900 to-gray-900 relative">
+        <section className="py-32 bg-gradient-to-b from-slate-950 via-gray-900 to-black relative">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -781,20 +781,20 @@ const CoursePage = () => {
                           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">{course.title}</h3>
                           <p className="text-lg text-gray-600 mb-4 leading-relaxed">{course.description}</p>
                         </div>
-                        <div className="text-center lg:text-right bg-gray-50 p-5 rounded-xl border border-gray-200">
+                        <div className="text-center lg:text-right bg-white/5 p-5 rounded-xl border border-white/10">
                           <div className="flex items-center justify-center lg:justify-end space-x-2 mb-2">
-                            <span className="text-3xl md:text-4xl font-bold text-gray-900">${course.price}</span>
-                            <span className="text-xl text-gray-500 line-through">${course.originalPrice}</span>
+                            <span className="text-3xl md:text-4xl font-bold text-white">${course.price}</span>
+                            <span className="text-xl text-gray-300 line-through">${course.originalPrice}</span>
                           </div>
-                          <div className="text-sm text-gray-600 font-medium">{course.duration} • Premium Course</div>
-                          <div className="mt-1 text-xs text-green-600 font-semibold">Save ${course.originalPrice - course.price}!</div>
+                          <div className="text-sm text-gray-300 font-medium">{course.duration} • Premium Course</div>
+                          <div className="mt-1 text-xs text-green-400 font-semibold">Save ${course.originalPrice - course.price}!</div>
                         </div>
                       </div>
                       
                       {/* Features */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                         {course.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center text-base text-gray-700 bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                          <div key={idx} className="flex items-center text-base text-gray-300 bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
                             <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -807,10 +807,10 @@ const CoursePage = () => {
                       
                       {/* CTA */}
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold text-base transition-colors duration-200 flex-1 sm:flex-none">
+                        <button className="btn-primary flex-1 sm:flex-none">
                           Enroll Now
                         </button>
-                        <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold text-base transition-colors duration-200 flex-1 sm:flex-none">
+                        <button className="btn-secondary flex-1 sm:flex-none">
                           Preview Course
                         </button>
                       </div>
@@ -823,7 +823,7 @@ const CoursePage = () => {
         </section>
         
         {/* Featured Course */}
-        <section className="py-32 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white relative overflow-hidden">
+        <section className="py-32 bg-gradient-to-br from-slate-950 via-gray-900 to-black text-white relative overflow-hidden">
           {/* Background Effects */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -868,7 +868,7 @@ const CoursePage = () => {
                   </div>
                   
                   <button 
-                    className="premium-button text-white px-12 py-6 rounded-2xl font-black text-2xl shadow-2xl w-full lg:w-auto"
+                    className="btn-primary rounded-2xl w-full lg:w-auto font-black text-2xl"
                     onMouseEnter={() => setCursorType('book')}
                     onMouseLeave={() => setCursorType('default')}
                   >
@@ -885,7 +885,7 @@ const CoursePage = () => {
                     </div>
                     <h3 className="text-3xl font-black mb-4 text-white">Course Preview</h3>
                     <p className="text-xl text-gray-300 mb-8 leading-relaxed">Watch a sample lesson from our Elliott Wave Fundamentals course</p>
-                    <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg">
+                    <button className="btn-primary rounded-2xl">
                       ▶ Play Preview (3:24)
                     </button>
                   </div>
@@ -896,7 +896,7 @@ const CoursePage = () => {
         </section>
         
         {/* Testimonials */}
-        <section className="py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+        <section className="py-32 bg-gradient-to-br from-slate-950 via-gray-900 to-black text-white relative overflow-hidden">
           {/* Background Effects */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -953,7 +953,7 @@ const CoursePage = () => {
              
              <div className="text-center mt-16">
                <button 
-                 className="premium-button text-white px-12 py-6 rounded-2xl font-black text-2xl shadow-2xl hover:scale-105 transition-all duration-300"
+                 className="btn-primary rounded-2xl font-black text-2xl hover:scale-105 transition-all duration-300"
                  onMouseEnter={() => setCursorType('book')}
                  onMouseLeave={() => setCursorType('default')}
                >

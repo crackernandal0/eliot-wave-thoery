@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-black text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-600 to-fuchsia-600 text-white font-bold rounded-lg px-8 py-4 shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-white/10 text-white rounded-lg border border-white/20 px-8 py-4 transition-all duration-300 hover:bg-white/20 hover:scale-105;
+  }
+  .card-dark {
+    @apply relative bg-white/5 border border-white/10 rounded-2xl text-white backdrop-blur-md shadow-xl;
+  }
+}
+
+/* Enhanced gradient overlay for dark cards */
+.card-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(236,72,153,0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-dark:hover::before {
+  opacity: 1;
+}
